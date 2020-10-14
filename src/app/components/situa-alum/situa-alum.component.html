@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-body">
+        <h6 class="text-center">
+            Situaciones de alumnos
+        </h6>
+        <table class="table table-sm table-hover">
+            <thead>
+                <td><b>#</b></td>
+                <td><b>Nombre</b></td>
+                <td><b>Grado</b></td>
+                <td><b>Fecha</b></td>
+                <td><b>Situación</b></td>
+                <td><b>Importancia</b></td>
+                <!--
+                <td style="color:#FF0000"><b>Eliminar registro</b></td>
+                -->
+            </thead>
+            <tbody>
+                <tr *ngFor="let regsitu of alusituaList; let indice = index">
+                    <td>{{indice + 1}}</td>
+                    <td>{{regsitu.nombre}}</td>
+                    <td>{{regsitu.grado}}</td>
+                    <td>{{regsitu.fecha | date: 'dd/MM/yyyy'}}</td>
+                    <td>{{regsitu.situacion}}</td>
+                    <td>{{regsitu.inportancia}}</td>
+
+
+                    <td>
+                        <!--
+                        <a class="btn btn-secondary text-white" (click)="onEdit(product)">
+                            <i class="far fa-edit"></i>
+                        </a>
+                        -->
+                        <!--
+                        <a class="btn btn-danger text-white" (click)="onDelete(regsitu.$key)">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                        -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

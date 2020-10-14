@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-body">
+        <h6 class="text-center">
+            Notificacion de terceros
+        </h6>
+        <table class="table table-sm table-hover">
+            <thead>
+                <td><b>#</b></td>
+                <td><b>Nombre Encargado</b></td>
+                <td><b>Nombre Alumno</b></td>
+                <td><b>Grado</b></td>
+                <td><b>Nota</b></td>
+                <td><b>Importancia</b></td>
+                <td><b>tipo</b></td>
+                <td><b>Fecha</b></td>
+                <!-- <td style="color:#FF0000"><b>Eliminar registro</b></td>-->
+            </thead>
+            <tbody>
+                <tr *ngFor="let regter of regTerList; let indice = index">
+                    <td>{{indice + 1}}</td>
+                    <td>{{regter. nombre}}</td>
+                    <td>{{regter. nombrealumno}}</td>
+                    <td>{{regter.grado}}</td>
+                    <td>{{regter.nota}}</td>
+                    <td>{{regter.inportancia}}</td>
+                    <td>{{regter.tipo}}</td>
+                    <td>{{regter.fecha | date: 'dd/MM/yyyy'}}</td>
+
+                    <td>
+                        <!--
+                        <a class="btn btn-secondary text-white" (click)="onEdit(product)">
+                            <i class="far fa-edit"></i>
+                        </a>
+                        
+                        <a class="btn btn-danger text-white" (click)="onDelete(regter.$key)">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                        -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

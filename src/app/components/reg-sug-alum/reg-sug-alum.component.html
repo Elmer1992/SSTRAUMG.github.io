@@ -1,0 +1,81 @@
+<div class="car mt-5">
+    <div class="card-body">
+
+        <form #regterForm="ngForm" (ngSubmit)="onSubmit(regterForm)">
+            <h3 class="text-center" style="color:#FF0000">
+                LLene el Formulario
+            </h3>
+            <h4>
+                Si desea brindarnos alguna sugerencia, para mejorar el servicio en pro de la educación.
+            </h4>
+            <br>
+
+            <div class="for-group">
+                <label for="nombre"><b>Yo:</b></label>
+                <input type="text" class="form-control" name="nombre" #nombre="ngModel" [(ngModel)]="SugAlumService.selecteAlunotif.nombre" placeholder="Escribe tu nombre">
+            </div>
+
+            <div class="for-group">
+                <label for="nombre"><b>Cursando el grado de:</b></label>
+                <input type="text" class="form-control" name="grado" #grado="ngModel" [(ngModel)]="SugAlumService.selecteAlunotif.grado" placeholder="Selecciona tu grado" list="listgrado">
+                <datalist id="listgrado">
+                    <option>Pre-primaria</option>
+                    <option>Primero primaria</option>
+                    <option>Segundo primaria</option>
+                    <option>Tercero primaria</option>
+                    <option>Cuarto primaria</option>
+                    <option>Quinto primaria</option>
+                    <option>Sexto primaria</option>
+                </datalist>
+            </div>
+
+
+
+            <div class="for-group">
+                <label for="nombre"><b>Como alumno, quiero realizar la siguiente sugerencia: </b></label>
+                <input type="text" class="form-control" name="sugerencia" #dpi="ngModel" [(ngModel)]="SugAlumService.selecteAlunotif.sugerencia" placeholder="Escribe tu sugerencia">
+            </div>
+
+            <div class="for-group">
+                <label for="nombre"><b>en la fecha</b></label>
+                <input type="date" class="form-control" name="fecha" #fecha="ngModel" [(ngModel)]="SugAlumService.selecteAlunotif.fecha" placeholder="fecha">
+
+            </div>
+
+            <div class="for-group">
+                <label for="nombre"><b>Importancia de sugerencia:</b></label>
+                <input type="text" class="form-control" name="inportancia" #parentesco="ngModel" [(ngModel)]="SugAlumService.selecteAlunotif.inportancia" placeholder="Selecciona la importancia de tu sugerencia" list="list">
+                <datalist id="list">
+                <option>Poco importante</option>
+                <option>Medianamente importante</option>
+                <option>Muy importante</option>
+                <option>demaciado importante</option>
+                <option>Urgente</option>
+                
+            </datalist>
+            </div>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bookmark-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                      </svg> Enviar Sugerencia
+                </button>
+                <br>
+
+                <button class="btn btn-secondary" type="reset" (click)="resetForm(regterForm)">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bookmark-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        <path fill-rule="evenodd" d="M5.5 6.5A.5.5 0 0 1 6 6h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
+                      </svg> Limpiar los campos
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+<br><br>
+
+<div class="btn-group">
+    <input type="text" class="form-control" id="buscar" placeholder="buscar persona" [(ngModel)]='buscar'>
+    <button class="btn btn-primary" (click)='consultaAlumno();consultaAlumnosalida();'>consultar</button>
+</div>
+
+<br><br>
+<table class="table table-bordered">
+    <tr>
+        <tr *ngFor="let entradahoylista of salidahoyList">
+            <td>{{entradahoylista.nombresalidahoy}}</td>
+        </tr>
+</table>
+
+<table class="table uk-table-striped">
+    <h4>Historial de entradas</h4>
+    <tr>
+        <!--  <td> identradahoy</td>-->
+        <!-- <td>nombreentrahoy</td>-->
+        <td>#</td>
+        <td>FECHA</td>
+        <td>HORA </td>
+
+
+        <tr *ngFor="let entradahoylista of entradahoyList; let indice = index">
+            <!-- <td>{{entradahoylista.identradahoy}}</td>-->
+            <!-- <td>{{entradahoylista.nombreentrahoy}}</td>-->
+            <td>{{indice + 1}}</td>
+            <td>{{entradahoylista.fechanetrada}}</td>
+            <td>{{entradahoylista.horaentrada}}</td>
+
+
+        </tr>

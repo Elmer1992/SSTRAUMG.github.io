@@ -1,0 +1,46 @@
+<div>
+
+    <br><br>
+    <div class="btn-group">
+        <input type="text" class="form-control" id="buscar" placeholder="buscar persona" [(ngModel)]='buscar'>
+        <button class="btn btn-primary" (click)='consulPersona();'>consultar</button>
+    </div>
+
+    <br><br>
+
+
+    <table class="table table-bordered">
+
+        <tr>
+            <td> num_identificacion</td>
+            <td>nombre</td>
+            <td>apellido</td>
+            <td>telefono</td>
+            <td>direccion</td>
+        </tr>
+
+        <tr *ngFor="let personalista of personaList">
+            <td>{{personalista.num_identificacion}}</td>
+            <td>{{personalista.nombre}}</td>
+            <td>{{personalista.apellido}}</td>
+            <td>{{personalista.telefono}}</td>
+            <td>{{personalista.direccion}}</td>
+            <td>
+                <button type="button" (click)="onEdit(personalista)" class="btn btn-outline-danger btn-sm">
+        Edit
+      </button>
+            </td>
+            <td>
+
+                <button type="button" (click)="onDelete(personalista.$keyRegistro)" class="btn btn-outline-danger btn-sm">
+        Delete
+      </button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<div>
+    <app-listinscripcion></app-listinscripcion>
+</div>

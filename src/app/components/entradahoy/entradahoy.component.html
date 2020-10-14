@@ -1,0 +1,63 @@
+<br><br>
+
+<div class="btn-group">
+    <input type="text" class="form-control" id="buscar" placeholder="buscar persona" [(ngModel)]='buscar'>
+    <button class="btn btn-primary" (click)='consultaAlumno(); consultaAlumnosalida();'>consultar</button>
+</div>
+
+<br><br>
+<table class="table table-bordered">
+    <tr>
+        <tr *ngFor="let entradahoylista of entradahoyList">
+            <td>{{entradahoylista.nombreentrahoy}}</td>
+        </tr>
+</table>
+
+<table class="table table-primary">
+    <h4>Información de entrada de hoy</h4>
+    <tr>
+        <!--  <td> identradahoy</td>-->
+        <!-- <td>nombreentrahoy</td>-->
+        <td>HORA ENTRADA</td>
+        <td>FECHA</td>
+
+        <tr *ngFor="let entradahoylista of entradahoyList">
+            <!-- <td>{{entradahoylista.identradahoy}}</td>-->
+            <!-- <td>{{entradahoylista.nombreentrahoy}}</td>-->
+            <td>{{entradahoylista.horaentradahoy}}</td>
+            <td>{{entradahoylista.fechaentrahoy}}</td>
+            <!--
+        <td>
+            <button type="button" (click)="onEdit(entradahoylista)" class="btn btn-outline-danger btn-sm">
+        Edit
+      </button>
+        </td>
+         <td>
+           
+      <button type="button" (click)="onDelete(personalista.$keyRegistro)" class="btn btn-outline-danger btn-sm">
+        Delete
+      </button>
+      
+        </td>-->
+        </tr>
+
+</table>
+
+<table class="table table-primary">
+    <h4>Información de salida de hoy</h4>
+    <tr>
+        <!--  <td> identradahoy</td>-->
+        <!-- <td>nombreentrahoy</td>-->
+        <td>HORA SALIDA</td>
+        <td>FECHA</td>
+
+        <tr *ngFor="let salidahoyLista of salidahoyList">
+            <!-- <td>{{entradahoylista.identradahoy}}</td>-->
+            <!-- <td>{{entradahoylista.nombreentrahoy}}</td>-->
+            <td>{{salidahoyLista.horasalidahoy}}</td>
+            <td>{{salidahoyLista.fechasalidahoy}}</td>
+
+
+        </tr>
+
+</table>

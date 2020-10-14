@@ -1,0 +1,42 @@
+<br>
+<h1>Datos Personales</h1>
+<br>
+<form #personaForm="ngForm">
+
+    <input type="hidden" name="$keyRegistro" #$keyRegistro="ngModel" [(ngModel)]="personaService.selectedPersona.$keyRegistro">
+
+    <label for="num_identificacion"><b>num_identificacion*</b></label>
+
+    <input class="form-control" id="num_identificacion" name="num_identificacion" #num_identificacion="ngModel" [(ngModel)]="personaService.selectedPersona.num_identificacion">
+
+    <br>
+    <label for="nombre"><b>nombre*</b></label>
+    <input type="text" class="form-control" name="nombre" id="nombre" #nombre="ngModel" [(ngModel)]="personaService.selectedPersona.nombre">
+    <br>
+
+    <label for="apellido"><b>apellido*</b></label>
+    <input type="text" class="form-control" name="apellido" id="apellido" #apellido="ngModel" [(ngModel)]="personaService.selectedPersona.apellido">
+    <br>
+    <label for="telefono"><b>telefono*</b></label>
+    <input type="text" class="form-control" name="telefono" id="telefono" #telefono="ngModel" [(ngModel)]="personaService.selectedPersona.telefono">
+    <br>
+    <label for="direccion"><b>direccion*</b></label>
+    <input type="text" class="form-control" name="direccion" id="direccion" #direccion="ngModel" [(ngModel)]="personaService.selectedPersona.direccion">
+    <br>
+
+    <div class="text-center">
+        <div class="btn-group btn-group-sm  text-center">
+            <button class="btn btn-outline-primary form-control" type="submit" (click)="onSubmit(personaForm)">
+        Agregar persona
+      </button>
+
+        </div>
+    </div>
+    <button class="btn btn-secondary" type="reset">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bookmark-dash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+            <path fill-rule="evenodd" d="M5.5 6.5A.5.5 0 0 1 6 6h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
+          </svg> Limpiar campos
+    </button>
+
+</form>
